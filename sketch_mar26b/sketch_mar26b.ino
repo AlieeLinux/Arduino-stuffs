@@ -26,8 +26,8 @@ void loop() {
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
 
-  analogWrite(ENA, 200); // speed (0–255)
-  analogWrite(ENB, 200);
+  analogWrite(ENA, 150); // speed (0–255)
+  analogWrite(ENB, 150);
 
   delay(3000);
 
@@ -46,8 +46,26 @@ void loop() {
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
 
-  analogWrite(ENA, 200);
-  analogWrite(ENB, 200);
+  analogWrite(ENA, 150);
+  analogWrite(ENB, 150);
 
   delay(3000);
+
+// Turn Left
+digitalWrite(IN1, LOW);  // Left motor backward
+digitalWrite(IN2, HIGH);
+digitalWrite(IN3, HIGH); // Right motor forward
+digitalWrite(IN4, LOW);
+analogWrite(ENA, 150);
+analogWrite(ENB, 150);
+delay(1000);
+
+// Turn Right
+digitalWrite(IN1, HIGH); // Left motor forward
+digitalWrite(IN2, LOW);
+digitalWrite(IN3, LOW);   // Right motor backward
+digitalWrite(IN4, HIGH);
+analogWrite(ENA, 150);
+analogWrite(ENB, 150);
+delay(1000);
 }
